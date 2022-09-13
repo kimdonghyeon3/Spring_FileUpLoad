@@ -63,7 +63,10 @@ public class MemberController {
     }
 
     @PostMapping("/member/login")
-    public String login(){
+    public String login(Model model){
+
+        model.addAttribute("loginedMember");
+
         return "redirect:/member/profile";
     }
 }
