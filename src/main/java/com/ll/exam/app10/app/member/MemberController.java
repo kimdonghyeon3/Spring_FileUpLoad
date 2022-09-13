@@ -56,4 +56,14 @@ public class MemberController {
 
         return "member/profile";
     }
+
+    @GetMapping("/member/login")
+    public String showLogin(){
+        return "member/login";
+    }
+
+    @PostMapping("/member/login")
+    public String login(){
+        return "redirect:/member/profile";
+    }
 }
