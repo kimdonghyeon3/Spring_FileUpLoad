@@ -26,6 +26,22 @@ public class SecurityConfig {
                 .loginPage("/member/login")  //get
                 .loginProcessingUrl("/member/login");  //post
 
+        //요즘 스타일
+//        http
+//                .csrf(
+//                        csrf -> csrf.disable()
+//                )
+//                .authorizeRequests(
+//                        authorizeRequests -> authorizeRequests
+//                                .antMatchers("/**")
+//                                .permitAll()
+//                )
+//                .formLogin(
+//                        formLogin -> formLogin
+//                                .loginPage("/member/login") // GET
+//                                .loginProcessingUrl("/member/login") // POST
+//                );
+
 
         return http.build();
     }
