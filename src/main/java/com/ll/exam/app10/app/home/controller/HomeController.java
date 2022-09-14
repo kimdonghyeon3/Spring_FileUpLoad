@@ -4,6 +4,7 @@ import com.ll.exam.app10.app.member.Member;
 import com.ll.exam.app10.app.member.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +28,13 @@ public class HomeController {
     @GetMapping("/about")
     public String showAbout() {
         return "home/about";
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("/currentUserOrigin")
+    @ResponseBody
+    public Principal currentUserOrigin(Principal principal) {
+        return principal;
     }
 
 }
