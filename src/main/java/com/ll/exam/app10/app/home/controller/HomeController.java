@@ -22,18 +22,19 @@ public class HomeController {
     @RequestMapping("/")
     public String main(Principal principal, Model model) {
 
-        System.out.println("principal = " + principal.getName());
-
-        Member loginedMember = memberService.getMemberByUsername(principal.getName());
+        Member loginedMember = null;
         String loginedMemberProfileImgUrl = null;
 
-        if(loginedMember != null){
+        if (principal != null && principal.getName() != null) {
+            loginedMember = memberService.getMemberByUsername(principal.getName());
+        }
+
+        if (loginedMember != null) {
             loginedMemberProfileImgUrl = loginedMember.getProfileImgUrl();
         }
 
-        model.addAttribute("loginedMember",loginedMember);
-        model.addAttribute("loginedMemberProfileImgUrl",loginedMemberProfileImgUrl);
-
+        model.addAttribute("loginedMember", loginedMember);
+        model.addAttribute("loginedMemberProfileImgUrl", loginedMemberProfileImgUrl);
 
         return "home/main";
     }
