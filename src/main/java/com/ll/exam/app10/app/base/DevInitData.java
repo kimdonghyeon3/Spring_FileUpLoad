@@ -1,7 +1,7 @@
 package com.ll.exam.app10.app.base;
 
-import com.ll.exam.app10.app.member.Member;
-import com.ll.exam.app10.app.member.MemberService;
+import com.ll.exam.app10.app.member.entity.Member;
+import com.ll.exam.app10.app.member.service.MemberService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

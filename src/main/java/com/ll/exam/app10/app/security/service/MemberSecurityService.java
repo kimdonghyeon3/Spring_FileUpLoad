@@ -1,7 +1,7 @@
 package com.ll.exam.app10.app.security.service;
 
-import com.ll.exam.app10.app.member.Member;
-import com.ll.exam.app10.app.member.MemberRepository;
+import com.ll.exam.app10.app.member.entity.Member;
+import com.ll.exam.app10.app.member.repository.MemberRepository;
 import com.ll.exam.app10.app.security.dto.MemberContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

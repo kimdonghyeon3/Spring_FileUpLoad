@@ -1,5 +1,7 @@
-package com.ll.exam.app10.app.member;
+package com.ll.exam.app10.app.member.controller;
 
+import com.ll.exam.app10.app.member.entity.Member;
+import com.ll.exam.app10.app.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.CacheControl;
 import org.springframework.http.HttpHeaders;
@@ -16,10 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.security.Principal;
 import java.util.concurrent.TimeUnit;
 
 @Controller

@@ -1,17 +1,15 @@
 package com.ll.exam.app10;
 
-import com.ll.exam.app10.app.member.Member;
-import com.ll.exam.app10.app.member.MemberController;
-import com.ll.exam.app10.app.member.MemberService;
+import com.ll.exam.app10.app.member.entity.Member;
+import com.ll.exam.app10.app.member.controller.MemberController;
+import com.ll.exam.app10.app.member.service.MemberService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.ll.exam.app10.app.home.controller.HomeController;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockMultipartFile;
