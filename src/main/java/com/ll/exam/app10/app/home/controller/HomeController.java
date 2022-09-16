@@ -1,22 +1,12 @@
 package com.ll.exam.app10.app.home.controller;
 
-import com.ll.exam.app10.app.member.Member;
-import com.ll.exam.app10.app.member.MemberController;
 import com.ll.exam.app10.app.member.MemberService;
 import com.ll.exam.app10.app.security.dto.MemberContext;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.File;
-import java.io.IOException;
-import java.security.Principal;
-import java.util.UUID;
 
 @Controller
 @RequiredArgsConstructor
